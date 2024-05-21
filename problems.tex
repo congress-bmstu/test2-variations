@@ -1,0 +1,52 @@
+\begin{problem}
+Теоретический вопрос.
+\end{problem}
+
+\begin{problem}
+ Найти экстремали задачи с подвижными концами.  
+ \[
+   \int\limits_{0}^{1} ((y')^2 + 2yy' - 32y^2)\,dx \to \mathrm{extr}.
+ \]
+ 
+\begin{solution}
+  Запишем уравнение Эйлера:  
+  \[
+    F_y - \frac{d}{dx} F_{y'} = 0.
+  \]
+ Получим  
+ \[
+     2y' - 64y - \frac{d}{dx}(2y' + 2y) = - 64y - 2y'' = 0,
+ \]
+ или $ y'' + 32y = 0 $. Решим это уравнение.  
+ \[
+   \lambda^2 + 32 = 0 \implies \lambda = \pm\sqrt{-32} = \pm 4i\sqrt{2},\\
+ \]
+ Поскольку корни чисто мнимые, общее решение имеет вид  
+ \begin{align*}
+   y(x) &= C_1 \cos 4\sqrt{2}x + C_2 \sin 4\sqrt{2}x,\\
+   y'(x) &= 4\sqrt2(-C_1\sin4\sqrt2 x + C_2\cos4\sqrt2 x).
+ \end{align*}
+ Запишем условия трансверсальности: $ F_{y'} \big|_{x=a} = 0 $, $ F_{y'}\big|_{x=b}=0 $,
+ где $ a = 0 $, $ b = 1 $.
+
+ В нашем случае
+ \begin{multline*}
+   F_{y'} = 8\sqrt{2}(-C_1\sin4\sqrt2 x + C_2 \cos4\sqrt2 x) + 2C_1\cos 4\sqrt2
+   x + 2C_2 \sin4\sqrt2 x = \\ =
+   (-8\sqrt2\sin4\sqrt2 x + 2\cos4\sqrt2 x)C_1 + (8\sqrt2 \cos 4\sqrt2 x +
+   2\sin4\sqrt2 x) C_2.
+ \end{multline*}
+Получаем систему
+\[
+    \begin{cases}
+      2C_1 + 8\sqrt2 C_2 = 0, \\
+   (-8\sqrt2\sin4\sqrt2  + 2\cos4\sqrt2 )C_1 + (8\sqrt2 \cos 4\sqrt2  +
+   2\sin4\sqrt2 ) C_2 = 0.
+    \end{cases}
+\]
+Видно, что определитель $ \det A = 132 \sin4 \sqrt{2} \approx
+  -77.375 \neq 0 $, поэтому система имеет единственное, нулевое решение. Вместе
+  с решением нулевой будет экстремаль задачи.
+\end{solution}
+\end{problem}
+

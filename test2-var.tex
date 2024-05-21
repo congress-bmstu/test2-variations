@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{amsthm, mathrsfs, mathtools, amssymb}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+
+\usepackage[english,russian]{babel}
+\usepackage[colorlinks = true, linkcolor = black, urlcolor = black]{hyperref}
+\usepackage[depth = subsection]{bookmark}
+\usepackage{enumitem}
+
+\ifx\pdfoutput\undefined
+\usepackage{graphicx}
+\else
+\usepackage[pdftex]{graphicx}
+\fi
+\usepackage{wrapfig}
+
+ \DeclareMathOperator{\pr}{pr}
+ \DeclareMathOperator{\rk}{rk}
+ %\DeclareMathOperator{\arctg}{arctg}
+ %\DeclareMathOperator{\arcctg}{arcctg}
+ %\DeclareMathOperator{\ch}{ch}
+ %\DeclareMathOperator{\sh}{sh}
+
+\usepackage{bm}
+
+
+\newtheoremstyle{example}% name
+{0.7cm}% Space above
+{0.7cm}% Space below
+{\small}% Body font
+{}% Indent amount
+{\small\scshape}% Theorem head font
+{.}% Punctuation after theorem head
+{.5em}% Space after theorem head
+{}% Theorem head spec (can be left empty, meaning ‘normal’)
+
+\theoremstyle{example}
+\newtheorem{example}{Пример}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{corollary}{Следствие}
+\newtheorem*{corollary*}{Следствие} 
+\newtheorem{lemma}{Лемма}
+\newtheorem{utv}{Утверждение}
+\newtheorem*{utv*}{Утверждение}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\newtheorem*{definition*}{Определение}
+\newtheorem{question}{Вопрос}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Замечание}
+\newtheorem*{remark*}{Замечание}
+\numberwithin{remark}{section}
+
+\frenchspacing
+
+\usepackage[labelsep=period]{caption}
+\captionsetup{font = small}
+
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Spl}{\mathrm{Spl}}
+\newcommand{\spl}{\mathrm{spl}}
+\newcounter{problem} 
+\newenvironment{problem}[1][]
+{
+	\refstepcounter{problem} 
+	\par \vspace{0.7em} \noindent
+  \textbf{Задача \theproblem}\ifx&#1&\else\ (#1)\fi. 
+}
+{
+	\vspace{1em}	
+}
+
+\newenvironment{solution}
+{
+	\vspace{0.3em}
+	\par\textsc{Решение.}
+}
+{
+	\qed
+  % \vspace{3em}
+}
+\graphicspath{
+    {images00-01/}{images00-02/}
+      {images01-01/}{images01-02/}{images01-03/}
+}
+\usepackage{showlabels}
+% будет показывать ссылки прямо в pdf. когда файл готов, лучше убрать
+
+\usepackage{geometry}
+\geometry{verbose,a4paper,tmargin=1cm,bmargin=2cm,lmargin=1.5cm,rmargin=1.5cm}
+
+
+
+\begin{document}
+\title{МОВИ --- тренировочный вариант для РК№2}
+\maketitle
+\tableofcontents
+
+\input{problems}
+
+
+
+\end{document}
