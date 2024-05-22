@@ -65,6 +65,8 @@
 \newcommand{\Hom}{\mathrm{Hom}}
 \newcommand{\Spl}{\mathrm{Spl}}
 \newcommand{\spl}{\mathrm{spl}}
+
+
 \newcounter{problem} 
 \newenvironment{problem}[1][]
 {
@@ -83,8 +85,16 @@
 }
 {
 	\qed
-  % \vspace{3em}
 }
+
+\newcounter{que}
+\newcommand{\que}[1]{%
+  \refstepcounter{que}
+	\par \vspace{0.7em} 
+  \textbf{\theque.} \emph{#1}
+}
+
+
 \graphicspath{
     {images00-01/}{images00-02/}
       {images01-01/}{images01-02/}{images01-03/}
@@ -98,11 +108,16 @@
 
 
 \begin{document}
-\title{МОВИ --- тренировочный вариант для РК№2}
+\title{МОВИ --- тренировочный вариант и вопросы для РК №2}
 \maketitle
 \tableofcontents
 
+\section*{Задачи}
 \input{problems}
+
+\section*{Теоретические вопросы}
+\addcontentsline{toc}{section}{Теоретические вопросы}
+\input{theory}
 
 
 
