@@ -105,6 +105,9 @@
 \usepackage{geometry}
 \geometry{verbose,a4paper,tmargin=1cm,bmargin=2cm,lmargin=1.5cm,rmargin=1.5cm}
 
+\usepackage{setspace}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
 
 
 \begin{document}
@@ -112,7 +115,15 @@
 \maketitle
 \tableofcontents
 
+\vspace{1.5em}
+\begin{spacing}{0.05}
+\noindent
+\HRule\\
+\HRule
+\end{spacing}
+
 \section*{Задачи}
+\addcontentsline{toc}{section}{Задачи}
 \input{problems}
 
 \section*{Теоретические вопросы}
