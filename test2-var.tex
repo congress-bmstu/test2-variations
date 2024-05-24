@@ -89,12 +89,16 @@
 	\qed
 }
 
-\newcounter{que}
+% \newcounter{que}
+% \newcommand{\que}[1]{%
+%   \refstepcounter{que}
+% 	\par \vspace{0.7em} 
+%   \textbf{\theque.} \emph{#1}
+% }
 \newcommand{\que}[1]{%
-  \refstepcounter{que}
-	\par \vspace{0.7em} 
-  \textbf{\theque.} \emph{#1}
+  \subsection{#1}
 }
+\renewcommand{\thesubsection}{\arabic{subsection}}
 
 
 \graphicspath{
